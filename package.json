@@ -1,0 +1,37 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksei-Uzin/react-template.git"
+  },
+  "keywords": [],
+  "author": "Aleksei Uzin <aleksei.uzin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksei-Uzin/react-template/issues"
+  },
+  "homepage": "https://github.com/Aleksei-Uzin/react-template#readme",
+  "devDependencies": {
+    "css-loader": "7.1.2",
+    "css-minimizer-webpack-plugin": "7.0.2",
+    "html-webpack-plugin": "5.6.4",
+    "mini-css-extract-plugin": "2.9.4",
+    "sass": "1.93.2",
+    "sass-loader": "16.0.5",
+    "style-loader": "4.0.0",
+    "ts-loader": "9.5.4",
+    "typescript": "5.9.3",
+    "webpack": "5.101.3",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.2",
+    "webpack-merge": "6.0.1"
+  }
+}
