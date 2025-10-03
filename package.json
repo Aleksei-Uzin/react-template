@@ -6,6 +6,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
+    "format:check": "prettier --check src/**/*.{ts,tsx,css,scss}",
+    "format:write": "prettier --write src/**/*.{ts,tsx,css,scss}",
+    "lint": "eslint src/ --ext .ts,.tsx",
     "start": "webpack serve --open --config webpack.dev.js"
   },
   "repository": {
@@ -22,16 +25,23 @@
   "devDependencies": {
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
+    "@eslint/js": "9.36.0",
     "@types/react-dom": "19.1.9",
     "css-loader": "7.1.2",
     "css-minimizer-webpack-plugin": "7.0.2",
+    "eslint": "9.36.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react": "7.37.5",
+    "globals": "16.4.0",
     "html-webpack-plugin": "5.6.4",
     "mini-css-extract-plugin": "2.9.4",
+    "prettier": "3.6.2",
     "sass": "1.93.2",
     "sass-loader": "16.0.5",
     "style-loader": "4.0.0",
     "ts-loader": "9.5.4",
     "typescript": "5.9.3",
+    "typescript-eslint": "8.45.0",
     "webpack": "5.101.3",
     "webpack-cli": "6.0.1",
     "webpack-dev-server": "5.2.2",
