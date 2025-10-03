@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": false,
+    "sourceMap": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "custom.d.ts"]
+  "include": ["src", "custom.d.ts"]
 }

@@ -16,21 +16,17 @@ module.exports = merge(common, {
   },
   devtool: 'source-map',
   optimization: {
-    minimizer: [new CssMinimizerPlugin()],
+    minimizer: ['...', new CssMinimizerPlugin()],
     moduleIds: 'deterministic',
     runtimeChunk: 'single',
     splitChunks: {
+      chunks: 'all',
       cacheGroups: {
         styles: {
           name: 'styles',
           type: 'css/mini-extract',
           chunks: 'all',
           enforce: true,
-        },
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
         },
       },
     },
