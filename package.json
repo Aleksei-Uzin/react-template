@@ -1,7 +1,7 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic React template with TypeScript, Webpack, and SCSS",
   "private": true,
   "sideEffects": false,
   "scripts": {
@@ -9,13 +9,20 @@
     "format:check": "prettier --check src/**/*.{ts,tsx,css,scss}",
     "format:write": "prettier --write src/**/*.{ts,tsx,css,scss}",
     "lint": "eslint src/ --ext .ts,.tsx",
-    "start": "webpack serve --open --config webpack.dev.js"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "prepare": "husky && husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aleksei-Uzin/react-template.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "template",
+    "typescript",
+    "webpack",
+    "scss"
+  ],
   "author": "Aleksei Uzin <aleksei.uzin@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -26,6 +33,7 @@
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
     "@eslint/js": "9.36.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.6.1",
     "@types/react-dom": "19.1.9",
     "css-loader": "7.1.2",
     "css-minimizer-webpack-plugin": "7.0.2",
@@ -34,8 +42,11 @@
     "eslint-plugin-react": "7.37.5",
     "globals": "16.4.0",
     "html-webpack-plugin": "5.6.4",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.3",
     "mini-css-extract-plugin": "2.9.4",
     "prettier": "3.6.2",
+    "react-refresh": "0.18.0",
     "sass": "1.93.2",
     "sass-loader": "16.0.5",
     "style-loader": "4.0.0",
@@ -50,5 +61,10 @@
   "dependencies": {
     "react": "19.1.1",
     "react-dom": "19.1.1"
+  },
+  "lint-staged": {
+    "src/**/*": "prettier --write --ignore-unknown",
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
