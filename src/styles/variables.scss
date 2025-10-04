@@ -1,0 +1,9 @@
+@import url(./reset.scss);
+@import url(./fonts.scss);
+
+:root {
+  /* Font Family */
+  --font-primary-300: 'intel-one-mono_light', monospace;
+  --font-primary-400: 'intel-one-mono_regular', monospace;
+  --font-primary-700: 'intel-one-mono_bold', monospace;
+}
