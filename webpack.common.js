@@ -1,6 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
+const assetGenerator = {
+  filename: 'assets/[hash][ext]',
+}
+
 module.exports = {
   cache: {
     type: 'filesystem',
@@ -14,11 +18,22 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/[hash][ext]',
-        },
+        generator: assetGenerator,
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/resource',
+        resourceQuery: /url/, // *.svg?url
+        generator: assetGenerator,
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] }, // exclude if *.svg?url
+        use: ['@svgr/webpack'],
+        generator: assetGenerator,
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -36,8 +51,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      favicon: path.resolve(__dirname, 'src', 'assets/react.svg'),
       filename: 'index.html',
+      template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
   resolve: {

@@ -9,8 +9,16 @@ declare module '*.{png,jpg,jpeg,gif}' {
 }
 
 declare module '*.svg' {
-  const value: any
-  export default value
+  import * as React from 'react'
+  const ReactComponent: React.FunctionComponent<
+    React.PropsWithChildren<React.SVGProps<SVGSVGElement>>
+  >
+  export default ReactComponent
+}
+
+declare module '*.svg?url' {
+  const content: string
+  export default content
 }
 
 declare module '*.scss' {
