@@ -9,8 +9,10 @@
     "format:check": "prettier --check src/**/*.{ts,tsx,css,scss}",
     "format:write": "prettier --write src/**/*.{ts,tsx,css,scss}",
     "lint": "eslint src/ --ext .ts,.tsx",
+    "prepare": "husky && husky install",
     "start": "webpack serve --open --config webpack.dev.js",
-    "prepare": "husky && husky install"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -30,10 +32,17 @@
   },
   "homepage": "https://github.com/Aleksei-Uzin/react-template#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
     "@eslint/js": "9.36.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.6.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/jest": "30.0.0",
+    "@types/react": "19.2.0",
     "@types/react-dom": "19.1.9",
     "css-loader": "7.1.2",
     "css-minimizer-webpack-plugin": "7.0.2",
@@ -43,6 +52,9 @@
     "globals": "16.4.0",
     "html-webpack-plugin": "5.6.4",
     "husky": "9.1.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "30.2.0",
+    "jest-environment-jsdom": "30.2.0",
     "lint-staged": "16.2.3",
     "mini-css-extract-plugin": "2.9.4",
     "prettier": "3.6.2",
@@ -59,6 +71,7 @@
     "webpack-merge": "6.0.1"
   },
   "dependencies": {
+    "@svgr/webpack": "8.1.0",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },

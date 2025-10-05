@@ -13,7 +13,8 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "noEmit": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": ["src", "custom.d.ts"]
 }
