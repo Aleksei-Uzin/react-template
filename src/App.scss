@@ -11,8 +11,14 @@
   }
 }
 
+.logo-svg {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
 h1 {
-  padding: 4rem 0;
+  padding: 2rem 0;
   font-family: var(--font-primary-700);
   font-size: 2em;
   line-height: 1.1;

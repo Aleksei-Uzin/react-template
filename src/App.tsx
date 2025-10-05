@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './react.png'
+import ReactIcon from './assets/react.svg'
+import reactLogo from './assets/react.svg?url'
 import './App.scss'
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
         <img src={reactLogo} className="logo react" alt="React logo" />
       </div>
       <h1>Webpack, React, TypeScript Template</h1>
+      <div className="logo-svg">
+        <ReactIcon />
+      </div>
       <div className="card">
         <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
       </div>
