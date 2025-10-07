@@ -70,6 +70,9 @@ module.exports = {
     }),
   ],
   resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'src/assets/'),
+    },
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
 }
