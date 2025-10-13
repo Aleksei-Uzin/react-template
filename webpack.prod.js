@@ -10,7 +10,19 @@ module.exports = merge(common, {
       {
         test: /\.s[ac]ss$/i,
         sideEffects: true,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: false },
+          },
+        ],
       },
     ],
   },
