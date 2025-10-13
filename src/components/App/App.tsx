@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { ButtonsGroup } from '../ButtonsGroup'
+import { CheckboxGroup } from '../CheckboxGroup'
+import { SwitchGroup } from '../SwitchGroup'
+import { SelectAndTextField } from '../SelectAndTextField'
+import { ModalForm } from '../ModalForm'
 import ReactIcon from 'assets/react.svg'
 import reactLogo from 'assets/react.svg?url'
 import './App.scss'
 
 export function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div className="logo">
@@ -15,9 +17,11 @@ export function App() {
       <div className="logo-svg">
         <ReactIcon />
       </div>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-      </div>
+      <ButtonsGroup />
+      <CheckboxGroup />
+      <SwitchGroup />
+      <SelectAndTextField />
+      <ModalForm />
     </>
   )
 }

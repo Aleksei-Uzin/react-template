@@ -71,14 +71,14 @@
     "webpack-merge": "6.0.1"
   },
   "dependencies": {
+    "@aleksei-uzin/custom-components-lib": "1.11.7",
     "@svgr/webpack": "8.1.0",
     "babel-loader": "10.0.0",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },
   "lint-staged": {
-    "src/**/*": "prettier --write --ignore-unknown",
     "*.{ts,tsx}": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "src/**/*": "prettier --write --ignore-unknown"
   }
 }
